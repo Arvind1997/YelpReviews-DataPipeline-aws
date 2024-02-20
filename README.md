@@ -32,7 +32,10 @@ Data Storage: The cleaned dataset is then stored in an Amazon S3 bucket.
 The ETL (Extract, Transform, Load) process is handled by the etl_airflow_run() function. This function utilizes the Yelp API to fetch data for restaurants and bars in specified locations. The data is then processed and stored in a CSV file named yelp_reviews.csv.
 
 ## S3 Bucket
-The structured dataset is stored in an S3 bucket, enabling easy accessibility and scalability. The bucket follows the structure:
+The structured dataset is stored in an S3 bucket, enabling easy accessibility and scalability.
+
+![s3_bucket_yelp](https://github.com/Arvind1997/YelpReviews-DataPipeline-aws/assets/13155343/80b9272a-ce8b-483a-8116-e88c693e3eca)
+
 
 yelp_dataset/
 yelp_reviews.csv: Cleaned dataset containing information about restaurants and bars.
@@ -53,9 +56,16 @@ To run the Apache Airflow pipeline:
    ![ec2_securityaccess](https://github.com/Arvind1997/YelpReviews-DataPipeline-aws/assets/13155343/c188135e-ca3e-46a2-896d-adb0d1f6cd44)
    Note: The above configuration was created solely for project purpose and is not recommended for industry standards!
 
+## IAM Permissions for EC2 to Access S3:
+
+For this project, I have given the following accesses to EC2 to get a hold of the S3 bucket.
+![ec2-s3_permissionaccess](https://github.com/Arvind1997/YelpReviews-DataPipeline-aws/assets/13155343/7685a3ad-ff07-499c-ad1f-9bf21b9db117)   
+
 
 ## Steps to connect Airflow with EC2 Instance:
 1. Use SSH to connect to your EC2 instance. Replace your-ec2-ip and your-key.pem with your EC2 instance's public IP address and the path to your SSH private key file, respectively.
+
+   ![ec2_instance](https://github.com/Arvind1997/YelpReviews-DataPipeline-aws/assets/13155343/3df2373e-fb97-4273-be23-8ad1e35b8f5f)
 
    ![ec2-instance-ssh-connectiondetails](https://github.com/Arvind1997/YelpReviews-DataPipeline-aws/assets/13155343/f2f4987a-1575-4bb3-9236-6b6846b76f58)
 
