@@ -4,7 +4,7 @@ import pandas as pd
 def etl_airflow_run():
             
     url = 'https://api.yelp.com/v3/businesses/search'
-    key = 'P-rv2JVRSFz6qcX8tmZctCHkwtrMFVhJE5FsA1pXg60xp03x4V8epDVLWSbdNbzwElukaMEstSvd6Abj25Wx5kKRWNROk5dxTROsVDNKR6JpD-AgMW3ZAT8JYnvNZXYx'
+    key = '%key disclosed for security purpose%'
                 
     headers = {
                     'Authorization': 'Bearer %s' % key
